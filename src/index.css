@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  transition: background 0.4s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#quote-box{
+  padding: 40px;
+  width: 500px;
+}
+
+#text{
+  font-size: 32px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#author{
+  margin: auto 0 30px auto;
+  font-size: 16px;
+}
+
+#buttons{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 10px;
+}
+
+.hidden{
+  opacity: 0;
+}
+
+#new-quote{
+  grid-column: 3 / 13;
+  justify-self: end;
+}
+
+.button-link button{
+  width: 40px;
+}
+
+.btn{
+  transition: background 0.4s linear;
+  border: none;
+  color: white;
+}
+
+.btn:focus{
+  box-shadow: none;
+}
+
+
+@media (max-width: 600px) {
+  #quote-box {
+    width: 60vw;
+    min-width: 250px;
+    padding: 20px;
+  }
+  #text{
+    font-size: 16px;
+  }
+  #author{
+    font-size: 12px;
+    margin: auto 0 15px auto;
+  }
+  #tweet-quote button{
+    font-size: 12px;
+    padding: 5px;
+    width: 30px;
+  }
+  #tumblr-quote button{
+    font-size: 12px;
+    padding: 5px;
+    width: 30px;
+  }
+  #new-quote{
+    font-size: 12px;
+  }
+  #buttons{
+    grid-gap: 5px;
+  }
+}
